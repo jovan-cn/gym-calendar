@@ -3,7 +3,11 @@ import localFont from "next/font/local";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, unstable_setRequestLocale  } from 'next-intl/server';
+import { 
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale
+} from 'next-intl/server';
 import { routing } from "@/app/i18n/routing";
 
 
@@ -61,6 +65,5 @@ export async function generateMetadata({
  
   return {
     title: t('title'),
-    icons: '/logo.svg',
   };
 }
