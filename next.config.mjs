@@ -5,9 +5,12 @@ const withNextIntl = createNextIntlPlugin(
 );
 
 /** @type {import('next').NextConfig} */
+const dev = process.env.NODE_ENV !== "production";
 const nextConfig = {
+  basePath: dev ? undefined : "/gym-calendar",
+  output: dev ? undefined: "export", 
   images: {
-    unoptimized: process.env.NODE_ENV !== "production" ? false : true,
+    unoptimized: dev ? false : true,
   },
 };
 
