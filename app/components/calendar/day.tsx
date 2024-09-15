@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Tooltip } from "@/app/components/tooltip";
 import dayjs from "dayjs";
 import { ReactNode } from "react";
+import { firstDayColStart } from "@/app/util";
 
 
 interface DayProps {
@@ -9,7 +10,7 @@ interface DayProps {
   coloring(day: dayjs.Dayjs) : string | ReactNode | null,
 }
 export const Day: React.FC<DayProps> = ({date, coloring}) => {
-    const gridColStartStyle = `col-start-${date.date(1).day() + 1}`
+    const gridColStartStyle = firstDayColStart(date.date(1).day())
     const d = coloring(date);
 
   return (
