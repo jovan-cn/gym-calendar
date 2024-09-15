@@ -1,0 +1,9 @@
+{
+    "header": {
+        "title": "Gym Calendar"
+    },
+    "nav": {
+        "/": "HOME",
+        "/todo": "TODO"
+    }
+}

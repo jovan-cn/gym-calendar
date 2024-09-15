@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: gym
+    image: node:latest
+    tty: true
+    restart: unless-stopped
+    working_dir: /app
+    entrypoint: bash entrypoint.sh
+    ports:
+      - 10102:3000
+    volumes:
+      - ./:/app
