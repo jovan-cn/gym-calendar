@@ -1,5 +1,5 @@
 'server-only'
-import favicon from '@/app/favicon.ico'
+import favicon from '@/public/favicon.svg'
 
 import Image from "next/image";
 import React from "react"
