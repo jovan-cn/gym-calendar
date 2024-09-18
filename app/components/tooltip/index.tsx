@@ -12,15 +12,15 @@ export const Tooltip: React.FC<TooltipProps> = (props) =>{
   if (content === null) return children;
 
   return (
-    <div className={clsx('hover:relative group')}>
+    <div className={clsx('hover:relative group ')}>
       <div className={clsx(
         'absolute p-2 z-10 ',
         'hidden group-hover:inline-block rounded',
         'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-400',
-        position === 'top' && '-translate-x-1/2 left-1/2 bottom-[150%]',
-        position === 'bottom' && ' -translate-x-1/2 left-1/2 top-[150%]',
-        position === 'left' && ' -translate-y-1/2 top-1/2 left-[150%]',
-        position === 'right' && ' -translate-y-1/2 top-1/2 right-[150%]',
+        position === 'top' && '-translate-x-1/2 left-1/2 -top-2 -translate-y-full',
+        position === 'bottom' && ' -translate-x-1/2 left-1/2 -bottom-2 translate-y-full',
+        position === 'left' && ' -translate-y-1/2 top-1/2 -left-2 -translate-x-full',
+        position === 'right' && ' -translate-y-1/2 top-1/2  -right-2 translate-x-full',
       )}>
         <div className={clsx(
           'w-0 h-0 absolute border-8',
