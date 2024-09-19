@@ -1,6 +1,7 @@
 'use client'
 import { MotionCalendar } from "@/app/components/calendar/motion";
 import { YearProvider } from "../hooks/useYearContext";
+import { StatisticPanel } from "../components/statistic";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
       <div className="relative">
         <MotionCalendar />
 
-        <aside className="hidden md:inline-block fixed absolute top-20 -right-[30%] bg-slate-400 h-60 w-20">
-          side
+        <aside className="md:inline-block fixed absolute top-20 -right-[40%] ">
+          <StatisticPanel />
         </aside>
       </div>
     </YearProvider>

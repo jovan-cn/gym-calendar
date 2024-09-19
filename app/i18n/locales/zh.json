@@ -5,5 +5,10 @@
     "nav": {
         "/": "首页",
         "/todo": "待办"
+    },
+    "statistic": {
+        "title": "统计看板",
+        "times_in_month": "共运动了<span> {times} </span>次",
+        "times_in_year": "{year}年共运动了 <time>{times}</time> 次"
     }
 }

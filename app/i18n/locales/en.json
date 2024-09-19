@@ -5,5 +5,10 @@
     "nav": {
         "/": "HOME",
         "/todo": "TODO"
+    },
+    "statistic": {
+        "title": "Statistic",
+        "times_in_month": "total <span> {times} </span> times",
+        "times_in_year": "total <time>{times}</time> times in {year}"
     }
 }
