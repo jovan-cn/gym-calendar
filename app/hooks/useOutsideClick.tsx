@@ -1,12 +1,12 @@
 'client-only'
 import { useEffect, useRef } from "react";
 
-export const useOutsideClick = (callback: Function) => {
-  const ref = useRef<any>();
+export const useOutsideClick = (callback: () => void) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClick = (event: any) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+    const handleClick = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
         callback();
       }
     };
@@ -16,7 +16,7 @@ export const useOutsideClick = (callback: Function) => {
     return () => {
       document.removeEventListener('click', handleClick, true);
     };
-  }, [ref]);
+  }, [ref, callback]);
 
   return ref;
 };

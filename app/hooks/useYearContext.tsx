@@ -5,7 +5,7 @@ import { ReactNode, createContext, useContext, useState } from "react"
 
 interface YearContextProps {
   year: number,
-  setYear: Function,
+  setYear: (v: number) => void,
 }
 const YearContext = createContext<YearContextProps>({
   year: 0,

@@ -3,20 +3,12 @@ import dayjs from 'dayjs'
 import { Record } from '../types/gym'
 
 export const getMonthTimes = (year: number) => {
-  let ret = Array.from({length: 12}, (_, i) => 0);
-
-  ret.map((_: number, m:number) => {
-    const month = dayjs().year(year).month(m);
-    const first = month.date(1);
-    const last  = month.date(month.daysInMonth())
-
-    data.map((d: Record, _: number) => {
-      if (first.format("YYYY-MM-DD") <= d.date && d.date <= last.format("YYYY-MM-DD")) {
-        ret[m]++;
-      }
-    })
+  const ret = Array.from({length: 12}, () => 0);
+  data.map((r: Record) => {
+    const d = dayjs(r.date);
+    if (d.year() !== year) return;
+    ret[d.month()]++;
   })
-
   return ret;
 }
 

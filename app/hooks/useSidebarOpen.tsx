@@ -4,7 +4,7 @@ import { ReactNode, createContext, useContext, useState } from "react";
 
 interface SidebarOpenProps {
   open: boolean,
-  setOpen: Function,
+  setOpen: (v: boolean) => void,
 }
 const SidebarOpenContext = createContext<SidebarOpenProps>({
   open: false,
