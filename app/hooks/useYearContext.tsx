@@ -1,3 +1,4 @@
+'use client'
 import dayjs from "dayjs"
 import { ReactNode, createContext, useContext, useState } from "react"
 

@@ -1,10 +1,11 @@
 'server-only'
-import React from "react"
+import React from "react";
 import I18nButton from "@/app/components/button/i18n";
 import ThemeButton from "@/app/components/button/theme";
 import Title from "@/app/components/title";
 import Logo from "@/app/components/logo";
 import Navbar from "@/app/components/navbar";
+import RightMore from "@/app/components/button/sidebar/right";
 
 export const Header: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ export const Header: React.FC = () => {
       <div className={`flex flex-row gap-1`}>
         <I18nButton />
         <ThemeButton />
+        <RightMore />
       </div>
     </header>
   )

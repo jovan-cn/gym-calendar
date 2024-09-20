@@ -7,6 +7,7 @@ import {
   unstable_setRequestLocale
 } from 'next-intl/server';
 import { routing } from "@/app/i18n/routing";
+import { SidebarOpenProvider } from "../hooks/useSidebarOpen";
 
 
 export default async function LocaleLaytout({
@@ -21,11 +22,13 @@ export default async function LocaleLaytout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+    <SidebarOpenProvider> {/* for Mobile sidebar */ }
       <Header />
       <main className="flex justify-center items-center lg:w-3/5 w-full mb-auto">
         {children}
       </main>
       <Footer />
+    </SidebarOpenProvider>
     </NextIntlClientProvider>
   );
 }
