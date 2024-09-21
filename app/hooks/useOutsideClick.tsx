@@ -1,9 +1,10 @@
 'client-only'
-import { useEffect, useRef } from "react";
+import { useEffect, MutableRefObject } from "react";
 
-export const useOutsideClick = (callback: () => void) => {
-  const ref = useRef<HTMLDivElement>(null);
-
+export const useOutsideClick = (
+  ref: MutableRefObject<HTMLElement | null>,
+  callback: () => void
+) => {
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -17,6 +18,4 @@ export const useOutsideClick = (callback: () => void) => {
       document.removeEventListener('click', handleClick, true);
     };
   }, [ref, callback]);
-
-  return ref;
 };

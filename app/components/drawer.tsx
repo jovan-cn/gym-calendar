@@ -1,6 +1,6 @@
 'use client'
 import clsx from "clsx";
-import { ReactNode } from "react"
+import { ReactNode, useRef } from "react"
 import { MdOutlineClose } from "react-icons/md";
 import { useOutsideClick } from "../hooks/useOutsideClick";
 
@@ -27,8 +27,8 @@ export const Drawer: React.FC<DrawerProps> = (props) => {
     onClose();
   }
 
-  /* ref's click event will conflict with button's in parent */
-  const drawerRef = useOutsideClick(handleClose);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  useOutsideClick(drawerRef, handleClose);
 
   return (
     <div ref={drawerRef} className={clsx(
