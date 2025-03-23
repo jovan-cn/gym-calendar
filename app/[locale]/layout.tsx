@@ -50,6 +50,7 @@ export async function generateMetadata({
     icons: {
       icon: 'favicon.svg',
       apple: 'favicon.svg',
-    }
+      manifest: 'site.webmanifest',
+    },
   };
 }
