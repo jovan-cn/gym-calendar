@@ -1,4 +1,7 @@
 [
+    { "date": "2025-08-10", "duration": 2796, "distance": 5.20, "kCal": 368 },
+    { "date": "2025-07-26", "duration": 2850, "distance": 5.41, "kCal": 373 },
+    { "date": "2025-07-12", "duration": 2725, "distance": 5.08, "kCal": 347 },
     { "date": "2025-06-28", "duration": 2814, "distance": 5.25, "kCal": 390 },
     { "date": "2025-05-31", "duration": 2891, "distance": 5.24, "kCal": 389 },
     { "date": "2025-05-03", "duration": 2558, "distance": 4.62, "kCal": 341 },
